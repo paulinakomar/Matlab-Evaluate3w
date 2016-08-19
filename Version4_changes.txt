@@ -1,0 +1,4 @@
+The previous stable version is v2. 
+v3 is applicable only for a specific set of samples.
+changes in the v4 compared to v2:
+-thermal conductivity is measured for every pair of samples at every frequency. Then the mean value and the standard deviation is calculated. In v2 min and max kappa were calculated based on a mean values of the temperature oscillations.

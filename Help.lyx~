@@ -1,0 +1,911 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing other 1.2
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 1.5cm
+\headsep 1.5cm
+\footskip 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Program for evaluation of the 3
+\begin_inset Formula $\omega$
+\end_inset
+
+ results
+\end_layout
+
+\begin_layout Section
+General information
+\end_layout
+
+\begin_layout Subsection
+Names of the files
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Names-of-the-files"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+file with 3
+\begin_inset Formula $\omega$
+\end_inset
+
+ results: SampleName_PowermW_U3w.dat (e.g.
+ DSO-NSTO-500p_15mW_U3w.dat) 
+\end_layout
+
+\begin_layout Itemize
+file with dRdT data: SampleName_dRdT.dat (e.g.
+ DSO-NSTO-500p_dRdT.dat) 
+\end_layout
+
+\begin_layout Itemize
+file with current, voltage and relative width of the heater: SampleName_PowermW_
+VIP.dat (e.g.DSO-NSTO-500p_25mW_VIP.dat) 
+\end_layout
+
+\begin_layout Itemize
+images: SampleName_0x.png (e.g.
+ DSO-NSTO-500p_01.png)
+\end_layout
+
+\begin_layout Subsection
+Structure of the files
+\end_layout
+
+\begin_layout Enumerate
+File with 3
+\begin_inset Formula $\omega$
+\end_inset
+
+ results (data in 
+\begin_inset Formula $\mu$
+\end_inset
+
+V):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f(Hz)	Sample1		Sample2	Sample3	Sample4	//structure
+\end_layout
+
+\begin_layout Plain Layout
+
+------------------------------------------------------
+\end_layout
+
+\begin_layout Plain Layout
+
+	DSO-NSTO	empty	empty	DSO-Substrate
+\end_layout
+
+\begin_layout Plain Layout
+
+100	1211.77002	NaN	NaN	1133.449951
+\end_layout
+
+\begin_layout Plain Layout
+
+116	1164.210083	NaN	NaN	1090.650024
+\end_layout
+
+\begin_layout Plain Layout
+
+135	1118.910034	NaN	NaN	1047.97998
+\end_layout
+
+\begin_layout Plain Layout
+
+157	1073.01001	NaN	NaN	1006.369934
+\end_layout
+
+\begin_layout Plain Layout
+
+183	1027.710083	NaN	NaN	963.4530029
+\end_layout
+
+\begin_layout Plain Layout
+
+212	984.5569458	NaN	NaN	923.756958
+\end_layout
+
+\begin_layout Plain Layout
+
+247	940.5650024	NaN	NaN	882.1519775
+\end_layout
+
+\begin_layout Plain Layout
+
+287	897.6500244	NaN	NaN	842.4559937
+\end_layout
+
+\begin_layout Plain Layout
+
+333	855.9260254	NaN	NaN	803.473999
+\end_layout
+
+\begin_layout Plain Layout
+
+387	814.7990112	NaN	NaN	764.7310181
+\end_layout
+
+\begin_layout Plain Layout
+
+450	774.1490479	NaN	NaN	726.4650269
+\end_layout
+
+\begin_layout Plain Layout
+
+523	734.690979	NaN	NaN	689.2720337
+\end_layout
+
+\begin_layout Plain Layout
+
+608	696.0670166	NaN	NaN	652.9130249
+\end_layout
+
+\begin_layout Plain Layout
+
+707	658.3969727	NaN	NaN	617.5079956
+\end_layout
+
+\begin_layout Plain Layout
+
+822	621.6799927	NaN	NaN	583.2949829
+\end_layout
+
+\begin_layout Plain Layout
+
+955	586.7520142	NaN	NaN	550.1550293
+\end_layout
+
+\begin_layout Plain Layout
+
+1110	552.7770386	NaN	NaN	518.2069702
+\end_layout
+
+\begin_layout Plain Layout
+
+1291	520.1139526	NaN	NaN	487.4490051
+\end_layout
+
+\begin_layout Plain Layout
+
+1500	489		NaN	NaN	458.1229858
+\end_layout
+
+\begin_layout Plain Layout
+
+1744	458.9580078	NaN	NaN	429.9899902
+\end_layout
+
+\begin_layout Plain Layout
+
+2027	430.3469849	NaN	NaN	403.0480042
+\end_layout
+
+\begin_layout Plain Layout
+
+2356	403.2870178	NaN	NaN	377.5379944
+\end_layout
+
+\begin_layout Plain Layout
+
+2739	377.5379944	NaN	NaN	353.4570007
+\end_layout
+
+\begin_layout Plain Layout
+
+3183	353.3379822	NaN	NaN	330.8079834
+\end_layout
+
+\begin_layout Plain Layout
+
+3700	330.4500122	NaN	NaN	309.4689941
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if you have 2 samples instead of 4, it is necessary to write NaNs in 2 columns
+ so these columns will not be taken into account while calculation.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Important! 
+\end_layout
+
+\begin_layout Itemize
+Column 1: frequency (Hz)
+\end_layout
+
+\begin_layout Itemize
+Columns 2-3: thick films (U
+\begin_inset Formula $_{3\omega}$
+\end_inset
+
+(
+\begin_inset Formula $\mu$
+\end_inset
+
+V))
+\end_layout
+
+\begin_layout Itemize
+Columns 4-5: reference films (U
+\begin_inset Formula $_{3\omega}$
+\end_inset
+
+(
+\begin_inset Formula $\mu$
+\end_inset
+
+V))
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+File with dRdT data (data must be in Ohm!):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Pt100	Sample1	Pt100	Sample2	Pt100	Sample3	Pt100	Sample4 
+\end_layout
+
+\begin_layout Plain Layout
+
+---------------------------------------------------------------------
+\end_layout
+
+\begin_layout Plain Layout
+
+Pt100	S1	empty	empty	empty	empty	Pt100	Substrate
+\end_layout
+
+\begin_layout Plain Layout
+
+107.13	24.84	NaN	NaN	NaN	NaN	107.12	23.66
+\end_layout
+
+\begin_layout Plain Layout
+
+109.75	25.19	NaN	NaN	NaN	NaN	109.76	23.99
+\end_layout
+
+\begin_layout Plain Layout
+
+111.22	25.39	NaN	NaN	NaN	NaN	111.24	24.20
+\end_layout
+
+\begin_layout Plain Layout
+
+112.46	25.56	NaN	NaN	NaN	NaN	112.48	24.36
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The data saved in the files from dRdT data acquisition is measured voltage
+ in mV.
+ The current applied during the measurement is 100 
+\begin_inset Formula $\mu$
+\end_inset
+
+A.
+ Therefore, to get the resistance in Ohm one has to multiply the measured
+ data by 10.
+ Additionally, in the SampleName_dRdT_measured.dat file the measurements
+ for positive and negative current are saved.
+ Therefore, it is necessary to calculate an average from both entries -
+ first(third...) line corresponds to a measurement for +I whereas second(fourth...)
+ line is V measured for -I.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Important! 
+\end_layout
+
+\begin_layout Itemize
+Columns 1-4: thick films (R (
+\begin_inset Formula $\Omega$
+\end_inset
+
+))
+\end_layout
+
+\begin_layout Itemize
+Columns 5-8: reference films (R (
+\begin_inset Formula $\Omega$
+\end_inset
+
+))
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+File with current and voltage used during the 3
+\begin_inset Formula $\omega$
+\end_inset
+
+ measurement and relative width of the heater:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Quantities	Sample1		Sample2	Sample3	Sample4	  //structure
+\end_layout
+
+\begin_layout Plain Layout
+
+-------------------------------------------------------------
+\end_layout
+
+\begin_layout Plain Layout
+
+		DSO-NSTO	empty	empty	DSO Substrate
+\end_layout
+
+\begin_layout Plain Layout
+
+Uappl(V)	3.971999884	NaN	NaN	4.427999973
+\end_layout
+
+\begin_layout Plain Layout
+
+Uw(V)		0.819400012	NaN	NaN	0.800800025
+\end_layout
+
+\begin_layout Plain Layout
+
+Iw(mA)		30.52700043	NaN	NaN	31.22599983
+\end_layout
+
+\begin_layout Plain Layout
+
+Pixel		0.93025		NaN	NaN	0.94458
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Important! 
+\end_layout
+
+\begin_layout Itemize
+Column 1: names of the quantities 
+\end_layout
+
+\begin_layout Itemize
+Columns 2-3: thick films 
+\end_layout
+
+\begin_layout Itemize
+Columns 4-5: reference films 
+\end_layout
+
+\begin_layout Standard
+Uappl (V), Uw (V), Iw (mA) are saved during the 3w measurement.
+ Quantity called "pixel" is a relative heater width that is determined by
+ the subprogram called "HeaterWidth".
+ It is width of a heater on a given sample (in pixels) divided by the width
+ of a heater on a mask (also in pixels).
+ The width of mask for 20 
+\begin_inset Formula $\mu$
+\end_inset
+
+m structure is saved in the program.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Subprogram HeaterWidth 
+\end_layout
+
+\begin_layout Standard
+There are two main layouts of this program - designed for single samples
+ (Layout/Single samples) and for a series of samples (Layout/series of samples).
+ The second variant is default.
+\end_layout
+
+\begin_layout Standard
+The program works in the following way: the user specifies two points on
+ one side of the heater line that create a line.
+ In the second step the user chooses several points (e.g.
+ 5) on the opposite edge and the program calculates a distance between the
+ line and these points and calculates an average.
+ In Single samples mode this is the outcome of the analysis.
+ In Series of samples mode the final result is an average of e.g 5 points
+ per image and a given number of images (e.g.
+ 3), so in total there are 15 heater widths to be taken to the average calculati
+on.
+\end_layout
+
+\begin_layout Standard
+The outcome of the program is a relative heater width - it is width of the
+ heater on the given sample (in pixels) divided by the width of the heater
+ on a mask (also in pixels).
+ The width of mask for 20 
+\begin_inset Formula $\mu$
+\end_inset
+
+m structure is saved in the program.
+\end_layout
+
+\begin_layout Subsection
+Single samples: 
+\end_layout
+
+\begin_layout Itemize
+Pressing on buttons Sample 1, Sample 2, etc.
+ you choose the files you want to measure.
+ 
+\end_layout
+
+\begin_layout Itemize
+Specify number of points to be measured - how many measurements do you want
+ to take for every line and press OK button.
+ If you choose for example 5, then a program calculates an average of the
+ 5 measurements and gives you a mean value as an outcome.
+ 
+\end_layout
+
+\begin_layout Itemize
+When you are done with choosing the points the result will show up in the
+ small table.You can save the data pressing Save button.
+\end_layout
+
+\begin_layout Subsection
+Series of samples: 
+\end_layout
+
+\begin_layout Itemize
+Specify the folder where the data for thick and reference samples are saved.
+  
+\end_layout
+
+\begin_layout Itemize
+Filenames for images should have form SampleName_01.png.
+ In a field next to "Sample" label you have to write SampleName and specify
+ how many images are saved in a series.
+ E.g.
+ if you have S1_01.png, S1_02.png, S1_03.png and S1_04.png, you write "S1" next
+ to label "Sample 1" and "4" next to "No.
+ of images".
+ 
+\end_layout
+
+\begin_layout Itemize
+If you have only 2 series of samples to measure that are in the same directory,
+ you have to specify only the path to "Thick samples", however, if you have
+ 4 series of samples, you have to specify "Ref.
+ samples" path as well.
+ Even if all the images are in one folder you have to specify the path twice.
+\end_layout
+
+\begin_layout Section
+Subprogram Dialog3
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Specify the directory that contains your data.
+ Pay attention to the filename pattern that was described at the beginning
+ of this document (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Names-of-the-files"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+Insert your SampleName and Power - based on this information the program
+ will be able to find your files.
+\end_layout
+
+\begin_layout Itemize
+Insert the thickness of your sample - the difference in thickness between
+ thick and the reference samples.
+\end_layout
+
+\begin_layout Itemize
+Specify the dimensions of a heater structure that you use.
+ Be careful! The program asks you for b, not 2b - if total width of your
+ heater line is 2b = 20 
+\begin_inset Formula $\mu$
+\end_inset
+
+m, you have to insert b = 10 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+\end_layout
+
+\begin_layout Itemize
+You can save your results in .png or/and .pdf files.
+ Three files will be saved: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+dRdT fit, 
+\end_layout
+
+\begin_layout Itemize
+fit of the U
+\begin_inset Formula $_{3\omega}$
+\end_inset
+
+ for slope based method and the determination of substrate thermal conductivity,
+\end_layout
+
+\begin_layout Itemize
+temperature oscillations for every sample and the difference between temperature
+ oscillations for thick and reference samples
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+additionally program generates also .xlsx (Excel) file containing summary
+ of all the calculated data.
+\end_layout
+
+\begin_layout Section
+Governing equations
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P=U_{\omega}\cdot I_{\omega}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R=\frac{U_{\omega}}{I_{\omega}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{dR}{dT}=\frac{dR_{hester}}{dT}=\frac{dR_{Pt100}}{dT}\cdot\frac{dR_{heater}}{dR_{Pt100}}=0.390802\,\frac{\Omega}{K}\cdot\frac{dR_{heater}}{dR_{Pt100}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Thermal conductivity of the substrate - calculated based on a slope method
+ 
+\begin_inset Formula 
+\[
+\kappa_{substrate}=\frac{U_{\omega}^{3}}{4\pi lR^{2}}\frac{1}{\frac{d(U_{3w})}{d(ln2\omega)}}\frac{dR}{dT}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Temperature oscillation introduced to the sample
+\begin_inset Formula 
+\[
+\Delta T=2\frac{1}{\frac{dR}{dT}}R\frac{U_{3\omega}}{U_{\omega}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Considering a heat flow analogously to an electric current, one can write
+ an analogy to the Ohm's law.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I=\frac{U}{R}=\frac{\sigma S}{L}U$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q=P=\frac{\kappa_{TF}\cdot2b\cdot l}{d_{TF}}\Delta T_{TF}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\kappa$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+S
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2b\cdot l$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+L
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+film thickness 
+\begin_inset Formula $d_{TF}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta T_{TF}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $d_{TF}=d_{thick\,film}-d_{reference}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta T_{TF}=\Delta T_{thick\,film}-\Delta T_{reference}$
+\end_inset
+
+, 
+\begin_inset Formula $2b$
+\end_inset
+
+ is the heater line width and 
+\begin_inset Formula $l$
+\end_inset
+
+ is its length between the voltage pads, 
+\begin_inset Formula $P$
+\end_inset
+
+ is the power used for a measurement.
+ Based on the comparison presented above, thermal conductivity of the thin
+ film may be calculated according to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\kappa_{TF}=\frac{P\cdot d_{TF}}{2b\cdot l\cdot\Delta T_{TF}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
